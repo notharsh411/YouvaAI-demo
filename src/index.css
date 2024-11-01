@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased text-gray-900 bg-gray-100;
+  }
+}
+
+@layer components {
+  .message-bubble {
+    @apply rounded-2xl p-4 max-w-[80%] shadow-sm;
+  }
+
+  .message-bubble-sent {
+    @apply bg-blue-500 text-white ml-auto;
+    border-bottom-right-radius: 4px;
+  }
+
+  .message-bubble-received {
+    @apply bg-white text-gray-900;
+    border-bottom-left-radius: 4px;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+}
